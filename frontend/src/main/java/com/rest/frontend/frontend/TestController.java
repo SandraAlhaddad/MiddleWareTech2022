@@ -1,5 +1,6 @@
 package com.rest.frontend.frontend;
 
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,4 +23,17 @@ public class TestController {
         return test;
     }
 
+    @GetMapping("/html")
+    public String displayPage(Model model) {
+
+        Student student = WebClient
+                .create("http://localhost:8080/StdController/firststudent")
+                .get()
+                .retrieve()
+                .bodyToMono(Student.class)
+                .block();
+        model.addAttribute("students", student);
+
+        return "page";
+    }
 }
