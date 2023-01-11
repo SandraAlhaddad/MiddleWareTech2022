@@ -5,6 +5,7 @@ public class Student {
     private String Id;
     private String Specialization;
     private String description;
+    private String country;
 
     public Student() {
     }
@@ -51,6 +52,20 @@ public class Student {
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    /**
+     * @return String return the country
+     */
+    public String getCountry() {
+        return country;
+    }
+
+    /**
+     * @param country the country to set
+     */
+    public void setCountry(String country) {
+        this.country = country;
     }
 
 }
