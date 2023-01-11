@@ -45,6 +45,11 @@ public class StudentController {
         return students.get(Id);
     }
 
+    @GetMapping("firststudent")
+    public Student getFirstStudent() {
+        return students.get("1");
+    }
+
     @Operation(summary = "Return a list of all students")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "List of all students", content = @Content)
