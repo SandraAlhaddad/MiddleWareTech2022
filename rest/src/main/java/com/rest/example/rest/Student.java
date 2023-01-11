@@ -4,6 +4,7 @@ public class Student {
     private String Name;
     private String Id;
     private String Specialization;
+    private String description;
 
     public Student() {
     }
@@ -36,6 +37,20 @@ public class Student {
 
     public void setSpecialization(String Specialization) {
         this.Specialization = Specialization;
+    }
+
+    /**
+     * @return String return the description
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * @param description the description to set
+     */
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 }
